@@ -5,6 +5,13 @@ export const crear = createAction(
   props<{ texto: string }>()
 );
 
+export const limpiarTodos = createAction('[TODO] Limpiar Todos');
+
+export const toggleAll = createAction(
+  '[TODO] Toggle Todo',
+  props<{ completado: boolean }>()
+);
+
 export const toggle = createAction(
   '[TODO] Toggle Todo',
   props<{ id: number }>()
@@ -18,9 +25,4 @@ export const editar = createAction(
 export const borrar = createAction(
   '[TODO] Borrar Todo',
   props<{ id: number }>()
-);
-
-export const toggleAll = createAction(
-  '[TODO] Toggle Todo',
-  props<{ completado: boolean }>()
 );
